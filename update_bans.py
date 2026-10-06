@@ -3,6 +3,10 @@ from datetime import datetime
 import urllib.request
 import hashlib
 import time
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 def fetch_holidays(country_code, year, retries=3, delay=2):
     """Stáhne státní svátky z veřejného API pro danou zemi a rok s opakovanými pokusy při výpadku."""
@@ -160,6 +164,33 @@ def get_country_metadata(code, year):
 def get_hash(content):
     return hashlib.md5(json.dumps(content, sort_keys=True).encode('utf-8')).hexdigest()
 
+def send_email_notification(new_version):
+    sender_email = "coffeemaster934@gmail.com"
+    receiver_email = "coffeemaster934@gmail.com"
+    app_password = os.environ.get("GMAIL_APP_PASSWORD")
+    
+    if not app_password:
+        print("Chybí GMAIL_APP_PASSWORD v proměnných prostředí, e-mail nebyl odeslán.")
+        return
+
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+    msg['Subject'] = f"🚚 Aktualizace zákazů kamionů - Verze {new_version}"
+
+    body = f"Ahoj,\n\nDatabáze zákazů byla právě aktualizována na novou verzi {new_version}.\nZměny byly úspěšně zkontrolovány pro všech 27 zemí EU.\n\nŠťastnou cestu!"
+    msg.attach(MIMEText(body, 'plain', 'utf-8'))
+
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, app_password)
+        server.sendmail(sender_email, receiver_email, msg.as_string())
+        server.quit()
+        print("E-mailové upozornění bylo úspěšně odesláno na coffeemaster934@gmail.com.")
+    except Exception as e:
+        print(f"Chyba při odesílání e-mailu: {e}")
+
 def main():
     file_path = 'bans.json'
     try:
@@ -235,6 +266,9 @@ def main():
         json.dump(new_data, f, ensure_ascii=False, indent=2)
     
     print(f"Kompletní EU data (všech 27 zemí) aktualizována na verzi {new_version} k: {new_data['last_updated']}")
+
+    # Odeslání e-mailového upozornění po úspěšné aktualizaci
+    send_email_notification(new_version)
 
 if __name__ == '__main__':
     main()
