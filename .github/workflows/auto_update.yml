@@ -2,7 +2,7 @@ name: Daily Truck Bans Check
 
 on:
   schedule:
-    - cron: '0 3 * * *' # Spustí se každý den ve 3:00 ráno
+    - cron: '0 1 * * *' # Spustí se každý den v 1:00 ráno
   workflow_dispatch: 
 
 jobs:
