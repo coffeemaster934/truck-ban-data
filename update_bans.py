@@ -16,7 +16,7 @@ def fetch_holidays(country_code, year):
     return []
 
 def get_country_rules(code, year):
-    """Vrací specifická pravidla pro víkendové a speciální zákazy pro jednotlivé státy EU."""
+    """Vrací detailní pravidla pro víkendové, noční a prázdninové zákazy pro evropské státy."""
     rules = {}
     
     if code == "DE":
@@ -24,23 +24,35 @@ def get_country_rules(code, year):
             "active": True, "days": ["Sunday"], "time": "00:00 - 22:00", "vehicles": "nad 7.5t a přívěsy"
         }
         rules["summer_ban"] = {
-            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday"], "time": "07:00 - 20:00", "note": "Vybrané dálnice (nařízení BAG)"
+            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday"], "time": "07:00 - 20:00", "note": "Prázdninový zákaz na vybraných dálnicích (nařízení BAG)"
         }
     elif code == "AT":
         rules["standard_weekend_ban"] = {
             "active": True, "days": ["Saturday", "Sunday"], "time": "So 15:00 - Ne 22:00", "vehicles": "nad 7.5t"
         }
+        rules["night_ban"] = {
+            "active": True, "time": "22:00 - 05:00", "vehicles": "nad 7.5t (Inntalautobahn A12 a vybrané úseky)"
+        }
     elif code == "FR":
         rules["standard_weekend_ban"] = {
             "active": True, "days": ["Saturday", "Sunday"], "time": "So 22:00 - Ne 22:00", "vehicles": "nad 7.5t"
+        }
+        rules["summer_ban"] = {
+            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday"], "time": "07:00 - 19:00", "note": "Celostátní prázdninové zákazy (černé/červené soboty Bison Futé)"
+        }
+    elif code == "IT":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Sunday"], "time": "09:00 - 22:00", "vehicles": "nad 7.5t"
+        }
+        rules["summer_ban"] = {
+            "active": True, "period": f"{year}-06-01 to {year}-09-01", "days": ["Sunday", "vybrané sobory"], "time": "Různé (často 07:00 - 22:00)", "note": "Rozšířené letní zákazy pro tranzit k moři"
         }
     elif code == "CZ":
         rules["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "13:00 - 22:00", "vehicles": "nad 7.5t"
         }
-    elif code == "IT":
-        rules["standard_weekend_ban"] = {
-            "active": True, "days": ["Sunday"], "time": "09:00 - 22:00", "vehicles": "nad 7.5t"
+        rules["summer_ban"] = {
+            "active": True, "period": f{year}-07-01 to {year}-08-31", "days": ["Friday", "Saturday", "Sunday"], "time": "Pá 17:00-21:00, So 07:00-13:00, Ne 13:00-22:00", "note": "Prázdninový provoz (vybrané silnice I. třídy a dálnice)"
         }
     elif code == "SK":
         rules["standard_weekend_ban"] = {
@@ -50,14 +62,19 @@ def get_country_rules(code, year):
         rules["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "08:00 - 22:00", "vehicles": "nad 12t"
         }
+        rules["summer_ban"] = {
+            "active": True, "period": f"{year}-06-25 to {year}-08-31", "days": ["Friday", "Saturday", "Sunday"], "time": "Pá 18-22, So 08-14, Ne 08-22", "note": "Letní prázdninová omezení pro nákladní vozidla nad 12t"
+        }
     elif code == "HU":
         rules["standard_weekend_ban"] = {
             "active": True, "days": ["Saturday", "Sunday"], "time": "So 22:00 - Ne 22:00", "vehicles": "nad 7.5t"
         }
+        rules["summer_ban"] = {
+            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday - Sunday"], "time": "So 15:00 - Ne 22:00", "note": "Letní rozšířený zákaz v Maďarsku (často i před svátky)"
+        }
     else:
-        # Základní výchozí profil pro ostatní státy EU, kde se víkendové zákazy liší nebo neuplatňují plošně
         rules["standard_weekend_ban"] = {
-            "active": False, "note": "Standardní celoplošné víkendové zákazy obvykle neuplatněny nebo lokálního charakteru."
+            "active": False, "note": "Standardní celoplošné víkendové zákazy neuplatněny nebo lokálního charakteru."
         }
         
     return rules
@@ -74,8 +91,6 @@ def main():
         old_data = {"version": 1, "countries": {}}
 
     current_year = datetime.now().year
-    
-    # Kompletních 27 členských států Evropské unie
     eu_countries = [
         "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", 
         "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", 
@@ -84,7 +99,7 @@ def main():
 
     new_countries_data = {}
     for code in eu_countries:
-        print(f"Stahuji data pro EU stát: {code}...")
+        print(f"Zpracovávám stát EU: {code}...")
         holidays = fetch_holidays(code, current_year)
         formatted_holidays = []
         for h in holidays:
@@ -113,13 +128,13 @@ def main():
     new_check.pop("last_updated", None)
 
     if get_hash(old_check) == get_hash(new_check):
-        print("Žádné změny v datech pro EU nebyly detekovány.")
+        print("Žádné změny v datech nebyly detekovány.")
         return
 
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(new_data, f, ensure_ascii=False, indent=2)
     
-    print(f"Kompletní data pro všech 27 zemí EU byla aktualizována k datu: {new_data['last_updated']}")
+    print(f"Data pro 27 zemí EU včetně prázdninových zákazů aktualizována k: {new_data['last_updated']}")
 
 if __name__ == '__main__':
     main()
