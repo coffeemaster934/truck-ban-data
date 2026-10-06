@@ -4,7 +4,7 @@ import urllib.request
 import hashlib
 
 def fetch_holidays(country_code, year):
-    """Stáhne státní svátky z veřejného API."""
+    """Stáhne státní svátky z veřejného API pro danou zemi a rok."""
     url = f"https://date.nager.at/api/v3/PublicHolidays/{year}/{country_code}"
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -15,23 +15,58 @@ def fetch_holidays(country_code, year):
         print(f"Chyba při stahování svátků pro {country_code}: {e}")
     return []
 
-def get_german_summer_bans(year):
-    """Vrací oficiální sobotní letní prázdninové zákazy v Německu (dle předpisů BAG)."""
-    # Německé letní zákazy platí pro soboty v červenci a srpnu od 7:00 do 20:00 na vybraných tazích
-    return {
-        "active": True,
-        "period": f"{year}-07-01 to {year}-08-31",
-        "days": ["Saturday"],
-        "time": "07:00 - 20:00",
-        "note": "Platí na dálnicích a vybraných silnicích 1. třídy dle nařízení BAG (nad 7.5t a přívěsy)."
-    }
+def get_country_rules(code, year):
+    """Vrací specifická pravidla pro víkendové a speciální zákazy pro jednotlivé státy EU."""
+    rules = {}
+    
+    if code == "DE":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Sunday"], "time": "00:00 - 22:00", "vehicles": "nad 7.5t a přívěsy"
+        }
+        rules["summer_ban"] = {
+            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday"], "time": "07:00 - 20:00", "note": "Vybrané dálnice (nařízení BAG)"
+        }
+    elif code == "AT":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Saturday", "Sunday"], "time": "So 15:00 - Ne 22:00", "vehicles": "nad 7.5t"
+        }
+    elif code == "FR":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Saturday", "Sunday"], "time": "So 22:00 - Ne 22:00", "vehicles": "nad 7.5t"
+        }
+    elif code == "CZ":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Sunday"], "time": "13:00 - 22:00", "vehicles": "nad 7.5t"
+        }
+    elif code == "IT":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Sunday"], "time": "09:00 - 22:00", "vehicles": "nad 7.5t"
+        }
+    elif code == "SK":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Sunday"], "time": "00:00 - 22:00", "vehicles": "nad 7.5t s přívěsem"
+        }
+    elif code == "PL":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Sunday"], "time": "08:00 - 22:00", "vehicles": "nad 12t"
+        }
+    elif code == "HU":
+        rules["standard_weekend_ban"] = {
+            "active": True, "days": ["Saturday", "Sunday"], "time": "So 22:00 - Ne 22:00", "vehicles": "nad 7.5t"
+        }
+    else:
+        # Základní výchozí profil pro ostatní státy EU, kde se víkendové zákazy liší nebo neuplatňují plošně
+        rules["standard_weekend_ban"] = {
+            "active": False, "note": "Standardní celoplošné víkendové zákazy obvykle neuplatněny nebo lokálního charakteru."
+        }
+        
+    return rules
 
 def get_hash(content):
     return hashlib.md5(json.dumps(content, sort_keys=True).encode('utf-8')).hexdigest()
 
 def main():
     file_path = 'bans.json'
-    
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             old_data = json.load(f)
@@ -39,10 +74,17 @@ def main():
         old_data = {"version": 1, "countries": {}}
 
     current_year = datetime.now().year
-    countries = ["DE", "AT", "FR", "CZ", "IT", "PL", "SK", "HU"]
+    
+    # Kompletních 27 členských států Evropské unie
+    eu_countries = [
+        "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", 
+        "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", 
+        "PL", "PT", "RO", "SK", "SI", "ES", "SE"
+    ]
 
     new_countries_data = {}
-    for code in countries:
+    for code in eu_countries:
+        print(f"Stahuji data pro EU stát: {code}...")
         holidays = fetch_holidays(code, current_year)
         formatted_holidays = []
         for h in holidays:
@@ -56,11 +98,7 @@ def main():
             "country_name": code,
             "holiday_bans": formatted_holidays
         }
-
-        # Pokud jde o Německo, přihodíme rovnou i speciální letní prázdninové zákazy BAG
-        if code == "DE":
-            country_obj["special_summer_ban"] = get_german_summer_bans(current_year)
-
+        country_obj.update(get_country_rules(code, current_year))
         new_countries_data[code] = country_obj
 
     new_data = {
@@ -69,20 +107,19 @@ def main():
         "countries": new_countries_data
     }
 
-    # Porovnání hashů, zda se něco změnilo
     old_check = dict(old_data)
     old_check.pop("last_updated", None)
     new_check = dict(new_data)
     new_check.pop("last_updated", None)
 
     if get_hash(old_check) == get_hash(new_check):
-        print("Žádné změny v datech nebyly detekovány.")
+        print("Žádné změny v datech pro EU nebyly detekovány.")
         return
 
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(new_data, f, ensure_ascii=False, indent=2)
     
-    print(f"Data byla úspěšně aktualizována včetně mimořádných zákazů k datu: {new_data['last_updated']}")
+    print(f"Kompletní data pro všech 27 zemí EU byla aktualizována k datu: {new_data['last_updated']}")
 
 if __name__ == '__main__':
     main()
