@@ -2,7 +2,7 @@ name: Daily Truck Bans Check
 
 on:
   schedule:
-    - cron: '0 1 * * *' # Spustí se každý den v 1:00 ráno
+    - cron: '0 1 * * *'
   workflow_dispatch: 
 
 jobs:
@@ -29,8 +29,12 @@ jobs:
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
           
-          # Automaticky schová změny v bans.json, stáhne server, a zase je aplikuje
-          git pull --rebase --autostash origin main
+          # Nejdříve ze všeho natvrdo stáhneme aktuální stav, ať se s ničím netrápíme
+          git fetch origin main
+          git reset --hard origin/main
+          
+          # Znovu spustíme python skript, aby vygeneroval čerstvá data nad aktuálním stavem
+          python update_bans.py
           
           git add bans.json
           git diff --quiet && git diff --staged --quiet && exit 0
