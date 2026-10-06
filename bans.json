@@ -1,5 +1,128 @@
 {
   "version": 1,
   "last_updated": "2026-10-06",
-  "bans": []
+  "countries": {
+    "DE": {
+      "country_name": "Německo",
+      "standard_weekend_ban": {
+        "active": true,
+        "days": ["Sunday"],
+        "time": "00:00 - 22:00",
+        "vehicles": "nad 7.5t a nákladní auta s přívěsem"
+      },
+      "summer_ban": {
+        "active": true,
+        "period": "1.7. - 31.8.",
+        "days": ["Saturday"],
+        "time": "07:00 - 20:00",
+        "note": "Platí na vybraných dálnicích a silnicích 1. třídy"
+      },
+      "holiday_bans": [
+        {
+          "date": "2026-10-03",
+          "name": "Den německé jednoty",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-31",
+          "name": "Den reformace (vybrané spolkové země)",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Všichni svatí (vybrané spolkové země)",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "AT": {
+      "country_name": "Rakousko",
+      "standard_weekend_ban": {
+        "active": true,
+        "days": ["Saturday", "Sunday"],
+        "time": "So 15:00 - Ne 22:00 (v sobotu odpoledne jen vybrané trasy/plosy, v neděli celoplošně od 00:00)",
+        "vehicles": "nákladní auta nad 7.5t"
+      },
+      "night_ban": {
+        "active": true,
+        "time": "22:00 - 05:00",
+        "vehicles": "nákladní auta nad 7.5t (hluková vyhláška na dálnici A12 apod.)"
+      },
+      "holiday_bans": [
+        {
+          "date": "2026-10-26",
+          "name": "Státní svátek Rakouska",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Všichni svatí",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-08",
+          "name": "Panna Maria",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "FR": {
+      "country_name": "Francie",
+      "standard_weekend_ban": {
+        "active": true,
+        "days": ["Saturday", "Sunday"],
+        "time": "So 22:00 - Ne 22:00",
+        "vehicles": "nad 7.5t"
+      },
+      "holiday_bans": [
+        {
+          "date": "2026-11-01",
+          "name": "Všichni svatí",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Den příměří 1918",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "CZ": {
+      "country_name": "Česká republika",
+      "standard_weekend_ban": {
+        "active": true,
+        "days": ["Sunday"],
+        "time": "13:00 - 22:00",
+        "vehicles": "nákladní a jízdní soupravy nad 7.5t"
+      },
+      "holiday_bans": [
+        {
+          "date": "2026-10-28",
+          "name": "Den vzniku samostatného československého státu",
+          "time": "13:00 - 22:00"
+        },
+        {
+          "date": "2026-11-17",
+          "name": "Den boje za svobodu a demokracii",
+          "time": "13:00 - 22:00"
+        }
+      ]
+    },
+    "IT": {
+      "country_name": "Itálie",
+      "standard_weekend_ban": {
+        "active": true,
+        "days": ["Sunday"],
+        "time": "Zpravidla 09:00 - 22:00 (v létě/o prázdninách častěji i v sobotu)",
+        "vehicles": "nad 7.5t"
+      },
+      "holiday_bans": [
+        {
+          "date": "2026-11-01",
+          "name": "Všichni svatí",
+          "time": "09:00 - 22:00"
+        }
+      ]
+    }
+  }
 }
