@@ -8,21 +8,20 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # DŮLEŽITÉ: Povoluje GitHub Actions zapisovat a pushovat změny do repozitáře
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Run update script
-        env:
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: python update_bans.py
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Run update script
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python update_bans.py
 
       - name: Commit and push if changed
