@@ -15,65 +15,88 @@ def fetch_holidays(country_code, year):
         print(f"Chyba při stahování svátků pro {country_code}: {e}")
     return []
 
-def get_country_rules(code, year):
-    """Vrací detailní pravidla pro víkendové, noční a prázdninové zákazy pro evropské státy."""
-    rules = {}
+def get_country_metadata(code, year):
+    """Vrací detailní pravidla, časová pásma, oficiální portály a regionální poznámky."""
+    rules = {
+        "timezone": "Europe/Berlin", # Výchozí středoevropský
+        "official_portal_url": "https://ec.europa.eu/transport/index_en",
+        "rules": {}
+    }
     
     if code == "DE":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Berlin"
+        rules["official_portal_url"] = "https://www.bag.bund.de/"
+        rules["regional_note"] = "Některé svátky (např. Den reformace, Všichni svatí) platí pouze ve vybraných spolkových zemích (např. BY, BW, NW, RP, SL)."
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "00:00 - 22:00", "vehicles": "nad 7.5t a přívěsy"
         }
-        rules["summer_ban"] = {
+        rules["rules"]["summer_ban"] = {
             "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday"], "time": "07:00 - 20:00", "note": "Prázdninový zákaz na vybraných dálnicích (nařízení BAG)"
         }
     elif code == "AT":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Vienna"
+        rules["official_portal_url"] = "https://www.asfinag.at/"
+        rules["regional_note"] = "Některé svátky a zákazy se mohou lišit podle spolkových zemí."
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Saturday", "Sunday"], "time": "So 15:00 - Ne 22:00", "vehicles": "nad 7.5t"
         }
-        rules["night_ban"] = {
+        rules["rules"]["night_ban"] = {
             "active": True, "time": "22:00 - 05:00", "vehicles": "nad 7.5t (Inntalautobahn A12 a vybrané úseky)"
         }
     elif code == "FR":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Paris"
+        rules["official_portal_url"] = "https://www.bison-fute.gouv.fr/"
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Saturday", "Sunday"], "time": "So 22:00 - Ne 22:00", "vehicles": "nad 7.5t"
         }
-        rules["summer_ban"] = {
+        rules["rules"]["summer_ban"] = {
             "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday"], "time": "07:00 - 19:00", "note": "Celostátní prázdninové zákazy (černé/červené soboty Bison Futé)"
         }
     elif code == "IT":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Rome"
+        rules["official_portal_url"] = "https://www.mit.gov.it/"
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "09:00 - 22:00", "vehicles": "nad 7.5t"
         }
-        rules["summer_ban"] = {
+        rules["rules"]["summer_ban"] = {
             "active": True, "period": f"{year}-06-01 to {year}-09-01", "days": ["Sunday", "vybrané sobory"], "time": "Různé (často 07:00 - 22:00)", "note": "Rozšířené letní zákazy pro tranzit k moři"
         }
     elif code == "CZ":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Prague"
+        rules["official_portal_url"] = "https://www.mdcr.cz/"
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "13:00 - 22:00", "vehicles": "nad 7.5t"
         }
-        rules["summer_ban"] = {
-            "active": True, "period": f{year}-07-01 to {year}-08-31", "days": ["Friday", "Saturday", "Sunday"], "time": "Pá 17:00-21:00, So 07:00-13:00, Ne 13:00-22:00", "note": "Prázdninový provoz (vybrané silnice I. třídy a dálnice)"
+        rules["rules"]["summer_ban"] = {
+            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Friday", "Saturday", "Sunday"], "time": "Pá 17:00-21:00, So 07:00-13:00, Ne 13:00-22:00", "note": "Prázdninový provoz (silnice I. třídy a dálnice)"
         }
     elif code == "SK":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Bratislava"
+        rules["official_portal_url"] = "https://www.mindop.sk/"
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "00:00 - 22:00", "vehicles": "nad 7.5t s přívěsem"
         }
     elif code == "PL":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Warsaw"
+        rules["official_portal_url"] = "https://www.gov.pl/web/infrastruktura"
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Sunday"], "time": "08:00 - 22:00", "vehicles": "nad 12t"
         }
-        rules["summer_ban"] = {
-            "active": True, "period": f"{year}-06-25 to {year}-08-31", "days": ["Friday", "Saturday", "Sunday"], "time": "Pá 18-22, So 08-14, Ne 08-22", "note": "Letní prázdninová omezení pro nákladní vozidla nad 12t"
+        rules["rules"]["summer_ban"] = {
+            "active": True, "period": f"{year}-06-25 to {year}-08-31", "days": ["Friday", "Saturday", "Sunday"], "time": "Pá 18-22, So 08-14, Ne 08-22", "note": "Letní prázdninová omezení nad 12t"
         }
     elif code == "HU":
-        rules["standard_weekend_ban"] = {
+        rules["timezone"] = "Europe/Budapest"
+        rules["official_portal_url"] = "https://www.utinform.hu/"
+        rules["rules"]["standard_weekend_ban"] = {
             "active": True, "days": ["Saturday", "Sunday"], "time": "So 22:00 - Ne 22:00", "vehicles": "nad 7.5t"
         }
-        rules["summer_ban"] = {
-            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday - Sunday"], "time": "So 15:00 - Ne 22:00", "note": "Letní rozšířený zákaz v Maďarsku (často i před svátky)"
+        rules["rules"]["summer_ban"] = {
+            "active": True, "period": f"{year}-07-01 to {year}-08-31", "days": ["Saturday - Sunday"], "time": "So 15:00 - Ne 22:00", "note": "Letní rozšířený zákaz v Maďarsku"
         }
     else:
-        rules["standard_weekend_ban"] = {
+        # Základní profil pro ostatní země EU
+        rules["rules"]["standard_weekend_ban"] = {
             "active": False, "note": "Standardní celoplošné víkendové zákazy neuplatněny nebo lokálního charakteru."
         }
         
@@ -99,7 +122,7 @@ def main():
 
     new_countries_data = {}
     for code in eu_countries:
-        print(f"Zpracovávám stát EU: {code}...")
+        print(f"Stahuji a kompletuji data pro: {code}...")
         holidays = fetch_holidays(code, current_year)
         formatted_holidays = []
         for h in holidays:
@@ -109,11 +132,19 @@ def main():
                 "time": "00:00 - 22:00"
             })
         
+        metadata = get_country_metadata(code, current_year)
+        
         country_obj = {
             "country_name": code,
+            "timezone": metadata["timezone"],
+            "official_portal_url": metadata["official_portal_url"],
             "holiday_bans": formatted_holidays
         }
-        country_obj.update(get_country_rules(code, current_year))
+        
+        if "regional_note" in metadata:
+            country_obj["regional_note"] = metadata["regional_note"]
+            
+        country_obj.update(metadata["rules"])
         new_countries_data[code] = country_obj
 
     new_data = {
@@ -134,7 +165,7 @@ def main():
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(new_data, f, ensure_ascii=False, indent=2)
     
-    print(f"Data pro 27 zemí EU včetně prázdninových zákazů aktualizována k: {new_data['last_updated']}")
+    print(f"Kompletní EU data (vč. časových pásem a odkazů) aktualizována k: {new_data['last_updated']}")
 
 if __name__ == '__main__':
     main()
