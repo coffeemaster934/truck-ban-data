@@ -9,7 +9,7 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # DŮLEŽITÉ: Povoluje GitHub Actions zapisovat a pushovat změny do repozitáře
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
