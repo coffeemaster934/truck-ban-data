@@ -40,13 +40,13 @@
       "standard_weekend_ban": {
         "active": true,
         "days": ["Saturday", "Sunday"],
-        "time": "So 15:00 - Ne 22:00 (v sobotu odpoledne jen vybrané trasy/plosy, v neděli celoplošně od 00:00)",
+        "time": "So 15:00 - Ne 22:00",
         "vehicles": "nákladní auta nad 7.5t"
       },
       "night_ban": {
         "active": true,
         "time": "22:00 - 05:00",
-        "vehicles": "nákladní auta nad 7.5t (hluková vyhláška na dálnici A12 apod.)"
+        "vehicles": "nákladní auta nad 7.5t (hluková vyhláška A12)"
       },
       "holiday_bans": [
         {
@@ -113,7 +113,7 @@
       "standard_weekend_ban": {
         "active": true,
         "days": ["Sunday"],
-        "time": "Zpravidla 09:00 - 22:00 (v létě/o prázdninách častěji i v sobotu)",
+        "time": "09:00 - 22:00",
         "vehicles": "nad 7.5t"
       },
       "holiday_bans": [
