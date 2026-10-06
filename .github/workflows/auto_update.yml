@@ -1,9 +1,9 @@
-name: Auto Update Truck Bans
+name: Daily Truck Bans Check
 
 on:
   schedule:
-    - cron: '0 6 * * 1' # Spustí se každé pondělí v 6:00 ráno
-  workflow_dispatch: # Možnost spustit ručně tlačítkem v rozhraní GitHubu
+    - cron: '0 3 * * *' # Spustí se každý den ve 3:00 ráno
+  workflow_dispatch: 
 
 jobs:
   update-data:
@@ -25,4 +25,4 @@ jobs:
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
           git add bans.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Automatická aktualizace dat zákazů [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automatická aktualizace změn v datech [skip ci]" && git push)
