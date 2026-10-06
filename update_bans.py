@@ -6,7 +6,7 @@ import time
 import os
 import smtplib
 from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+from email.mime.multipart import MIMEMultipart 
 
 def fetch_holidays(country_code, year, retries=3, delay=2):
     """Stáhne státní svátky z veřejného API pro danou zemi a rok s opakovanými pokusy při výpadku."""
