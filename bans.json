@@ -70,4 +70,10 @@
       "country_name": "BG",
       "timezone": "Europe/Sofia",
       "official_portal_url": "https://www.api.bg/",
-      "holiday
+      "holiday_bans": [],
+      "standard_weekend_ban": {
+        "active": false
+      }
+    }
+  }
+}
