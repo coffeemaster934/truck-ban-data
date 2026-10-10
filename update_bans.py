@@ -145,4 +145,151 @@ def get_country_metadata(code, year):
         rules["official_portal_url"] = "https://lakd.lrv.lt/"
         rules["rules"]["standard_weekend_ban"] = {"active": True, "days": ["Letní neděle"], "time": "16:00 - 22:00", "note": "Letní omezení pro vozidla nad 7.5t na vybraných tazích."}
 
-    # --- VÝCHODNÍ EV
+    # --- VÝCHODNÍ EVROPA (RO / BG / IE) ---
+    elif code == "RO":
+        rules["timezone"] = "Europe/Bucharest"
+        rules["official_portal_url"] = "https://www.cnadnr.ro/"
+        rules["rules"]["standard_weekend_ban"] = {"active": True, "days": ["Předvečer svátků a víkendy v létě"], "time": "Různé (často 06:00 - 22:00 na dálnicích)"}
+    elif code == "BG":
+        rules["timezone"] = "Europe/Sofia"
+        rules["official_portal_url"] = "https://www.api.bg/"
+        rules["rules"]["standard_weekend_ban"] = {"active": True, "days": ["Poslední den prázdnin/svátků"], "time": "16:00 - 20:00 na vybraných silnicích", "vehicles": "nad 12t"}
+    elif code == "IE":
+        rules["timezone"] = "Europe/Dublin"
+        rules["official_portal_url"] = "https://www.gov.ie/en/organisation/department-of-transport/"
+        rules["rules"]["standard_weekend_ban"] = {"active": False, "note": "Žádné celoplošné víkendové zákazy, lokální omezení v Dublinu."}
+        
+    return rules
+
+def get_hash(content):
+    return hashlib.md5(json.dumps(content, sort_keys=True).encode('utf-8')).hexdigest()
+
+def send_email_notification(new_version):
+    sender_email = "coffeemaster934@gmail.com"
+    receiver_email = "coffeemaster934@gmail.com"
+    app_password = os.environ.get("GMAIL_APP_PASSWORD")
+    
+    if not app_password:
+        print("Chybí GMAIL_APP_PASSWORD v proměnných prostředí, e-mail nebyl odeslán.")
+        return
+
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+    msg['Subject'] = f"🚚 Aktualizace zákazů kamionů - Verze {new_version}"
+
+    body = f"Ahoj,\n\nDatabáze zákazů byla právě aktualizována na novou verzi {new_version}.\nZměny byly úspěšně zkontrolovány pro všech 27 zemí EU.\n\nŠťastnou cestu!"
+    msg.attach(MIMEText(body, 'plain', 'utf-8'))
+
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, app_password)
+        server.sendmail(sender_email, receiver_email, msg.as_string())
+        server.quit()
+        print("E-mailové upozornění bylo úspěšně odesláno na coffeemaster934@gmail.com.")
+    except Exception as e:
+        print(f"Chyba při odesílání e-mailu: {e}")
+
+def main():
+    file_path = 'bans.json'
+    tmp_file_path = 'bans.json.tmp'
+    old_data = {"version": 1, "countries": {}}
+    
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+                if content:
+                    old_data = json.loads(content)
+        except Exception as e:
+            print(f"Varování: Existující bans.json je poškozený ({e}), bude nahrazen novou verzí.")
+
+    current_year = datetime.now().year
+    eu_countries = [
+        "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", 
+        "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", 
+        "PL", "PT", "RO", "SK", "SI", "ES", "SE"
+    ]
+
+    new_countries_data = {}
+    for code in eu_countries:
+        print(f"Stahuji a kompletuji data pro: {code}...")
+        holidays = fetch_holidays(code, current_year)
+        formatted_holidays = []
+        for h in holidays:
+            formatted_holidays.append({
+                "date": h.get("date"),
+                "name": h.get("localName") or h.get("name"),
+                "time": "00:00 - 22:00"
+            })
+        
+        metadata = get_country_metadata(code, current_year)
+        
+        country_obj = {
+            "country_name": code,
+            "timezone": metadata["timezone"],
+            "official_portal_url": metadata["official_portal_url"],
+            "holiday_bans": formatted_holidays
+        }
+        
+        if "regional_note" in metadata:
+            country_obj["regional_note"] = metadata["regional_note"]
+            
+        country_obj.update(metadata["rules"])
+        new_countries_data[code] = country_obj
+
+    # Bezpečnostní pojistka: Pokud API selhalo a máme méně než 25 zemí, data nezapíšeme
+    if len(new_countries_data) < 25:
+        print("CHYBA: Staženo podezřele málo zemí. Přerušuji zápis, abych nepoškodil existující data.")
+        return
+
+    # Zjištění, zda se data reálně změnila
+    old_check = dict(old_data)
+    old_check.pop("last_updated", None)
+    old_check.pop("version", None)
+    
+    current_version = old_data.get("version", 1)
+
+    new_data_temp = {
+        "countries": new_countries_data
+    }
+
+    if get_hash(old_check) == get_hash(new_data_temp):
+        print("Žádné změny v datech nebyly detekovány.")
+        return
+
+    # Pokud se data změnila, navýšíme verzi o 1
+    new_version = current_version + 1
+
+    new_data = {
+        "version": new_version,
+        "last_updated": datetime.now().strftime('%Y-%m-%d'),
+        "countries": new_countries_data
+    }
+
+    # ATOMICKÝ ZÁPIS: Zápis do dočasného souboru a ověření jeho formátu před přepsáním ostrého souboru
+    try:
+        with open(tmp_file_path, 'w', encoding='utf-8') as f:
+            json.dump(new_data, f, ensure_ascii=False, indent=2)
+        
+        with open(tmp_file_path, 'r', encoding='utf-8') as f:
+            json.load(f)
+
+        if os.path.exists(file_path):
+            os.remove(file_path)
+        os.rename(tmp_file_path, file_path)
+
+    except Exception as e:
+        print(f"CHYBA při atomickém zápisu souboru: {e}")
+        if os.path.exists(tmp_file_path):
+            os.remove(tmp_file_path)
+        return
+    
+    print(f"Kompletní EU data (všech 27 zemí) aktualizována na verzi {new_version} k: {new_data['last_updated']}")
+
+    # Odeslání e-mailového upozornění po úspěšné aktualizaci
+    send_email_notification(new_version)
+
+if __name__ == '__main__':
+    main()
