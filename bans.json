@@ -1,37 +1,120 @@
 {
-  "version": 2,
-  "last_updated": "2026-10-06",
+  "version": 3,
+  "last_updated": "2026-10-10",
   "countries": {
     "AT": {
       "country_name": "AT",
       "timezone": "Europe/Vienna",
       "official_portal_url": "https://www.asfinag.at/",
       "holiday_bans": [
-        { "date": "2026-01-01", "name": "Neujahr", "time": "00:00 - 22:00" },
-        { "date": "2026-01-06", "name": "Heilige Drei Könige", "time": "00:00 - 22:00" },
-        { "date": "2026-03-19", "name": "Josefstag", "time": "00:00 - 22:00" },
-        { "date": "2026-04-05", "name": "Ostersonntag", "time": "00:00 - 22:00" },
-        { "date": "2026-04-06", "name": "Ostermontag", "time": "00:00 - 22:00" },
-        { "date": "2026-05-01", "name": "Staatsfeiertag", "time": "00:00 - 22:00" },
-        { "date": "2026-05-04", "name": "Florianitag", "time": "00:00 - 22:00" },
-        { "date": "2026-05-14", "name": "Christi Himmelfahrt", "time": "00:00 - 22:00" },
-        { "date": "2026-05-24", "name": "Pfingstsonntag", "time": "00:00 - 22:00" },
-        { "date": "2026-05-25", "name": "Pfingstmontag", "time": "00:00 - 22:00" },
-        { "date": "2026-06-04", "name": "Fronleichnam", "time": "00:00 - 22:00" },
-        { "date": "2026-08-15", "name": "Maria Himmelfahrt", "time": "00:00 - 22:00" },
-        { "date": "2026-09-24", "name": "Rupertitag", "time": "00:00 - 22:00" },
-        { "date": "2026-10-26", "name": "Nationalfeiertag", "time": "00:00 - 22:00" },
-        { "date": "2026-11-01", "name": "Allerheiligen", "time": "00:00 - 22:00" },
-        { "date": "2026-11-11", "name": "Martinstag", "time": "00:00 - 22:00" },
-        { "date": "2026-11-15", "name": "Leopolditag", "time": "00:00 - 22:00" },
-        { "date": "2026-12-08", "name": "Mariä Empfängnis", "time": "00:00 - 22:00" },
-        { "date": "2026-12-25", "name": "Weihnachten", "time": "00:00 - 22:00" },
-        { "date": "2026-12-26", "name": "Stefanitag", "time": "00:00 - 22:00" }
+        {
+          "date": "2026-01-01",
+          "name": "Neujahr",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Heilige Drei Könige",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-19",
+          "name": "Josefstag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Ostersonntag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Ostermontag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Staatsfeiertag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-04",
+          "name": "Florianitag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Christi Himmelfahrt",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Pfingstsonntag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Pfingstmontag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Fronleichnam",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Maria Himmelfahrt",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Rupertitag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-26",
+          "name": "Nationalfeiertag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Allerheiligen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Martinstag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-15",
+          "name": "Leopolditag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-08",
+          "name": "Mariä Empfängnis",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Weihnachten",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Stefanitag",
+          "time": "00:00 - 22:00"
+        }
       ],
       "regional_note": "Zákazy se mohou lišit podle spolkových zemí.",
       "standard_weekend_ban": {
         "active": true,
-        "days": ["Saturday", "Sunday"],
+        "days": [
+          "Saturday",
+          "Sunday"
+        ],
         "time": "So 15:00 - Ne 22:00",
         "vehicles": "nad 7.5t"
       },
@@ -46,20 +129,76 @@
       "timezone": "Europe/Brussels",
       "official_portal_url": "https://mobilite.belgium.be/",
       "holiday_bans": [
-        { "date": "2026-01-01", "name": "Nieuwjaar", "time": "00:00 - 22:00" },
-        { "date": "2026-04-03", "name": "Goede Vrijdag", "time": "00:00 - 22:00" },
-        { "date": "2026-04-05", "name": "Pasen", "time": "00:00 - 22:00" },
-        { "date": "2026-04-06", "name": "Paasmaandag", "time": "00:00 - 22:00" },
-        { "date": "2026-05-01", "name": "Dag van de arbeid", "time": "00:00 - 22:00" },
-        { "date": "2026-05-14", "name": "Onze Lieve Heer hemel", "time": "00:00 - 22:00" },
-        { "date": "2026-05-15", "name": "Day after Ascension Day", "time": "00:00 - 22:00" },
-        { "date": "2026-05-25", "name": "Pinkstermaandag", "time": "00:00 - 22:00" },
-        { "date": "2026-07-21", "name": "Nationale feestdag", "time": "00:00 - 22:00" },
-        { "date": "2026-08-15", "name": "Onze Lieve Vrouw hemelvaart", "time": "00:00 - 22:00" },
-        { "date": "2026-11-01", "name": "Allerheiligen", "time": "00:00 - 22:00" },
-        { "date": "2026-11-11", "name": "Wapenstilstand", "time": "00:00 - 22:00" },
-        { "date": "2026-12-25", "name": "Kerstdag", "time": "00:00 - 22:00" },
-        { "date": "2026-12-26", "name": "Boxing Day", "time": "00:00 - 22:00" }
+        {
+          "date": "2026-01-01",
+          "name": "Nieuwjaar",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Goede Vrijdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Pasen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Paasmaandag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Dag van de arbeid",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Onze Lieve Heer hemel",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-15",
+          "name": "Day after Ascension Day",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Pinkstermaandag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-21",
+          "name": "Nationale feestdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Onze Lieve Vrouw hemelvaart",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Allerheiligen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Wapenstilstand",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Kerstdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Boxing Day",
+          "time": "00:00 - 22:00"
+        }
       ],
       "standard_weekend_ban": {
         "active": false,
@@ -68,12 +207,2415 @@
     },
     "BG": {
       "country_name": "BG",
-      "timezone": "Europe/Sofia",
-      "official_portal_url": "https://www.api.bg/",
-      "holiday_bans": [],
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Нова година",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-02",
+          "name": "Ден на валутната смяна",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-03",
+          "name": "Ден на oсвобождението на България от Oсманско робство",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-10",
+          "name": "Разпети петък",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-11",
+          "name": "Велика събота",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-12",
+          "name": "Великден",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-13",
+          "name": "Велики понеделник",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Ден на труда и на международната работническа солидарност",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-06",
+          "name": "Гергьовден, ден на храбростта и Българската армия",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Ден на Българската просвета и култура и на славянската писменост",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Ден на съединението",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Ден на независимостта на България",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Бъдни вечер",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Рождество Христово",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Рождество Христово",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "HR": {
+      "country_name": "HR",
+      "timezone": "Europe/Zagreb",
+      "official_portal_url": "https://mup.gov.hr/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Nova Godina",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Bogojavljenje, Sveta tri kralja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Uskrs i uskrsni ponedjeljak",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Uskrs i uskrsni ponedjeljak",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Međunarodni praznik rada",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-30",
+          "name": "Dan državnosti",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Tijelovo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Dan antifašističke borbe",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-05",
+          "name": "Dan pobjede i domovinske zahvalnosti i Dan hrvatskih branitelja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Velika Gospa",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Dan svih svetih",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-18",
+          "name": "Dan sjećanja na žrtve Domovinskog rata",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Božić",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Prvi dan po Božiću, Sveti Stjepan, Štefanje, Stipanje",
+          "time": "00:00 - 22:00"
+        }
+      ],
       "standard_weekend_ban": {
-        "active": false
+        "active": true,
+        "days": [
+          "Neděle v sezóně"
+        ],
+        "time": "12:00 - 23:00",
+        "note": "Sezónní letní omezení pro vybrané silnice."
       }
+    },
+    "CY": {
+      "country_name": "CY",
+      "timezone": "Asia/Nicosia",
+      "official_portal_url": "https://www.mcw.gov.cy/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Πρωτοχρονιά",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Θεοφάνεια",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-23",
+          "name": "Καθαρή Δευτέρα",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-25",
+          "name": "Επέτειος Ελληνικής Ανεξαρτησίας",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-01",
+          "name": "Κυπριακή Εθνική Επέτειος",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-10",
+          "name": "Μεγάλη Παρασκευή",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-13",
+          "name": "Δευτέρα της Διακαινησίμου",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-14",
+          "name": "Τρίτη της Διακαινησίμου",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Πρωτομαγιά",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "Αγίου Πνεύματος",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Δευτέρα Πεντηκοστής",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Η Κοίμησις της Θεοτόκου",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-01",
+          "name": "Επέτειος Κυπριακής Ανεξαρτησίας",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-28",
+          "name": "Το Όχι",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Παραμονή Χριστουγέννων",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Χριστούγεννα",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Δεύτερη μέρα των Χριστουγέννων",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": false,
+        "note": "Bez celostátních víkendových zákazů."
+      }
+    },
+    "CZ": {
+      "country_name": "CZ",
+      "timezone": "Europe/Prague",
+      "official_portal_url": "https://www.mdcr.cz/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Den obnovy samostatného českého státu; Nový rok",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Velký pátek",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Velikonoční pondělí",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Svátek práce",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-08",
+          "name": "Den vítězství",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-05",
+          "name": "Den slovanských věrozvěstů Cyrila a Metoděje",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-06",
+          "name": "Den upálení mistra Jana Husa",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Den české státnosti",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-28",
+          "name": "Den vzniku samostatného československého státu",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-17",
+          "name": "Den boje za svobodu a demokracii a Mezinárodní den studentstva",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Štědrý den",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "1. svátek vánoční",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "2. svátek vánoční",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Sunday"
+        ],
+        "time": "13:00 - 22:00",
+        "vehicles": "nad 7.5t"
+      },
+      "summer_ban": {
+        "active": true,
+        "period": "2026-07-01 to 2026-08-31",
+        "days": [
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "time": "Pá 17-21, So 07-13, Ne 13-22"
+      }
+    },
+    "DK": {
+      "country_name": "DK",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Nytårsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-02",
+          "name": "Skærtorsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Langfredag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Påskedag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "2. Påskedag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Kristi Himmelfartsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-15",
+          "name": "Banklukkedag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Pinsedag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "2. Pinsedag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Grundlovsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Juleaftensdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Juledag / 1. juledag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "2. juledag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-31",
+          "name": "Nytårsaftensdag",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "EE": {
+      "country_name": "EE",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "uusaasta",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-24",
+          "name": "iseseisvuspäev",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "suur reede",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "ülestõusmispühade 1. püha",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "kevadpüha",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "nelipühade 1. püha",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-23",
+          "name": "võidupüha and jaanilaupäev",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-24",
+          "name": "jaanipäev",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-20",
+          "name": "taasiseseisvumispäev",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "jõululaupäev",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "esimene jõulupüha",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "teine jõulupüha",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "FI": {
+      "country_name": "FI",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Uudenvuodenpäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Loppiainen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Pitkäperjantai",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Pääsiäispäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Toinen pääsiäispäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Vappu",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Helatorstai",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Helluntaipäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Juhannusaatto",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-20",
+          "name": "Juhannuspäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-31",
+          "name": "Pyhäinpäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-06",
+          "name": "Itsenäisyyspäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Jouluaatto",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Joulupäivä",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Tapaninpäivä",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "FR": {
+      "country_name": "FR",
+      "timezone": "Europe/Paris",
+      "official_portal_url": "https://www.bison-fute.gouv.fr/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Jour de l'an",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Lundi de Pâques",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Fête du Travail",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-08",
+          "name": "Victoire 1945",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Ascension",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Lundi de Pentecôte",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-14",
+          "name": "Fête nationale",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Assomption",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Toussaint",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Armistice 1918",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Noël",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Saturday",
+          "Sunday"
+        ],
+        "time": "So 22:00 - Ne 22:00",
+        "vehicles": "nad 7.5t"
+      },
+      "summer_ban": {
+        "active": true,
+        "period": "2026-07-01 to 2026-08-31",
+        "days": [
+          "Saturday"
+        ],
+        "time": "07:00 - 19:00",
+        "note": "Černé/červené soboty Bison Futé"
+      }
+    },
+    "DE": {
+      "country_name": "DE",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://www.bag.bund.de/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Neujahr",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Heilige Drei Könige",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-08",
+          "name": "Internationaler Frauentag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Karfreitag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Ostersonntag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Ostermontag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Tag der Arbeit",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Christi Himmelfahrt",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Pfingstsonntag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Pfingstmontag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Fronleichnam",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Mariä Himmelfahrt",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-20",
+          "name": "Weltkindertag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-03",
+          "name": "Tag der Deutschen Einheit",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-31",
+          "name": "Reformationstag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Allerheiligen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-18",
+          "name": "Buß- und Bettag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Erster Weihnachtstag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Zweiter Weihnachtstag",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "regional_note": "Některé svátky platí pouze ve vybraných spolkových zemích.",
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Sunday"
+        ],
+        "time": "00:00 - 22:00",
+        "vehicles": "nad 7.5t a přívěsy"
+      },
+      "summer_ban": {
+        "active": true,
+        "period": "2026-07-01 to 2026-08-31",
+        "days": [
+          "Saturday"
+        ],
+        "time": "07:00 - 20:00",
+        "note": "Prázdninový zákaz na vybraných dálnicích"
+      }
+    },
+    "GR": {
+      "country_name": "GR",
+      "timezone": "Europe/Athens",
+      "official_portal_url": "https://www.ynanp.gr/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Πρωτοχρονιά",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Θεοφάνεια",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-23",
+          "name": "Καθαρά Δευτέρα",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-25",
+          "name": "Ευαγγελισμός της Θεοτόκου",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-25",
+          "name": "Εικοστή Πέμπτη Μαρτίου",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-10",
+          "name": "Μεγάλη Παρασκευή",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-12",
+          "name": "Κυριακή του Πάσχα",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-13",
+          "name": "Δευτέρα του Πάσχα",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Εργατική Πρωτομαγιά",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "Πεντηκοστή",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Δευτέρα Πεντηκοστής",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Κοίμηση της Θεοτόκου",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-28",
+          "name": "Το Όχι",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Χριστούγεννα",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Σύναξις Υπεραγίας Θεοτόκου Μαρίας",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Před/Po svátcích a v létě"
+        ],
+        "time": "Časové bloky pro výjezdy z Atén a Soluně."
+      }
+    },
+    "HU": {
+      "country_name": "HU",
+      "timezone": "Europe/Budapest",
+      "official_portal_url": "https://www.utinform.hu/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Újév",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-15",
+          "name": "Nemzeti ünnep",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Nagypéntek",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Húsvétvasárnap",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Húsvéthétfő",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "A munka ünnepe",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Pünkösdvasárnap",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Pünkösdhétfő",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-20",
+          "name": "Az államalapítás ünnepe",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-23",
+          "name": "Nemzeti ünnep",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Mindenszentek",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Karácsony",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Karácsony másnapja",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Saturday",
+          "Sunday"
+        ],
+        "time": "So 22:00 - Ne 22:00",
+        "vehicles": "nad 7.5t"
+      }
+    },
+    "IE": {
+      "country_name": "IE",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Lá Caille",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-02",
+          "name": "Lá Fhéile Bríde",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-17",
+          "name": "Lá Fhéile Pádraig",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Aoine an Chéasta",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Luan Cásca",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-04",
+          "name": "Lá Bealtaine",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Lá Saoire i mí an Mheithimh",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-03",
+          "name": "Lá Saoire i mí Lúnasa",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-26",
+          "name": "Lá Saoire i mí Dheireadh Fómhair",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Lá Nollag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Lá Fhéile Stiofáin",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "IT": {
+      "country_name": "IT",
+      "timezone": "Europe/Rome",
+      "official_portal_url": "https://www.mit.gov.it/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Capodanno",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Epifania",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Pasqua",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Lunedì dell'Angelo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-25",
+          "name": "Festa della Liberazione",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Festa del Lavoro",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Lunedì di Pentecoste",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Festa della Repubblica",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Ferragosto o Assunzione",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-04",
+          "name": "San Francesco d'Assisi",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Tutti i Santi",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-08",
+          "name": "Immacolata Concezione",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Natale",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Santo Stefano",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Sunday"
+        ],
+        "time": "09:00 - 22:00",
+        "vehicles": "nad 7.5t"
+      },
+      "summer_ban": {
+        "active": true,
+        "period": "2026-06-01 to 2026-09-01",
+        "days": [
+          "Sunday"
+        ],
+        "time": "07:00 - 22:00",
+        "note": "Rozšířené letní zákazy tranzitu"
+      }
+    },
+    "LV": {
+      "country_name": "LV",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Jaungada diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-20",
+          "name": "1991. gada barikāžu aizstāvju atceres diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-26",
+          "name": "Latvijas Republikas starptautiskās (de jure) atzīšanas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-27",
+          "name": "Starptautisko nevalstisko organizāciju diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-02",
+          "name": "Nacionālo partizānu bruņotās pretošanās atceres diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-08",
+          "name": "Starptautiskā sieviešu diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-17",
+          "name": "Nacionālās pretošanās kustības piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-25",
+          "name": "Komunistiskā genocīda upuru piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Lielā Piektdiena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Pirmās Lieldienas",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Otrās Lieldienas",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-27",
+          "name": "Latgales kongresa diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Darba svētki",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Latvijas Republikas Satversmes sapulces sasaukšanas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-04",
+          "name": "Latvijas Republikas Neatkarības atjaunošanas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-08",
+          "name": "Nacisma sagrāves diena un Otrā pasaules kara upuru piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-09",
+          "name": "Eiropas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-10",
+          "name": "Mātes diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-15",
+          "name": "Starptautiskā ģimenes diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-17",
+          "name": "Ugunsdzēsēju un glābēju diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Vasarsvētki",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Starptautiskā bērnu aizsardzības diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-14",
+          "name": "Komunistiskā genocīda upuru piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Latvijas Republikas okupācijas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-21",
+          "name": "Medicīnas darbinieku diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Varoņu piemiņas diena (Cēsu kaujas atceres diena)",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Līgo diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jāņu diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-04",
+          "name": "Ebreju tautas genocīda upuru piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-11",
+          "name": "Jūras svētku diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-11",
+          "name": "Latvijas brīvības cīnītāju piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-21",
+          "name": "Konstitucionālā likuma “Par Latvijas Republikas valstisko statusu” pieņemšanas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-23",
+          "name": "Staļinisma un nacisma upuru atceres diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-01",
+          "name": "Zinību diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-13",
+          "name": "Tēva diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Baltu vienības diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-01",
+          "name": "Starptautiskā senioru diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-05",
+          "name": "Skolotāju diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-15",
+          "name": "Valsts valodas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-07",
+          "name": "Robežsargu diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Lāčplēša diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-18",
+          "name": "Latvijas Republikas Proklamēšanas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-21",
+          "name": "2013. gada 21. novembra traģēdijas atceres diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-05",
+          "name": "Policijas darbinieku diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-06",
+          "name": "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Ziemassvētku vakars",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Pirmie Ziemassvētki",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Otrie Ziemassvētki",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-31",
+          "name": "Vecgada diena",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "LT": {
+      "country_name": "LT",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Naujieji metai",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-16",
+          "name": "Lietuvos valstybės atkūrimo diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-11",
+          "name": "Lietuvos nepriklausomybės atkūrimo diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Velykos",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Antroji Velykų diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Tarptautinė darbo diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Joninės, Rasos",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-06",
+          "name": "Valstybės diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Žolinė",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Visų šventųjų diena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-02",
+          "name": "Vėlinės",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Šv. Kūčios",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Šv. Kalėdos",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Šv. Kalėdos",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "LU": {
+      "country_name": "LU",
+      "timezone": "Europe/Luxembourg",
+      "official_portal_url": "https://transports.gouv.lu/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Neijoerschdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Karfreideg",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Ouschterméindeg",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Dag vun der Aarbecht",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-09",
+          "name": "Europadag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Christi Himmelfaart",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Péngschtméindeg",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Groussherzogsgebuertsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Léiffrawëschdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Allerhellgen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Chrëschtdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Stiefesdag",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Soboty před nedělí a svátky"
+        ],
+        "time": "Zákazy vjezdu do/z DE a FR dle aktuálních bilaterálních dohod."
+      }
+    },
+    "MT": {
+      "country_name": "MT",
+      "timezone": "Europe/Malta",
+      "official_portal_url": "https://www.transport.gov.mt/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "L-Ewwel tas-Sena",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-10",
+          "name": "In-Nawfraġju ta’ San Pawl",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-19",
+          "name": "San Ġużepp",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-31",
+          "name": "Jum il-Ħelsien",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Il-Ġimgħa l-Kbira",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Jum il-Ħaddiem",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-07",
+          "name": "Sette Giugno",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-29",
+          "name": "L-Imnarja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Santa Marija",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-08",
+          "name": "Il-Vittorja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-21",
+          "name": "L-Indipendenza",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-08",
+          "name": "L-Immakulata Kunċizzjoni",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-13",
+          "name": "Jum ir-Repubblika",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Il-Milied",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": false,
+        "note": "Lokální časová omezení pro nákladní auta v obcích."
+      }
+    },
+    "NL": {
+      "country_name": "NL",
+      "timezone": "Europe/Amsterdam",
+      "official_portal_url": "https://www.rijkswaterstaat.nl/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Nieuwjaarsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Goede Vrijdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Eerste Paasdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Tweede Paasdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-27",
+          "name": "Koningsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-05",
+          "name": "Bevrijdingsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Hemelvaartsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Eerste Pinksterdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Tweede Pinksterdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Eerste Kerstdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Tweede Kerstdag",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": false,
+        "note": "Bez celoplošných víkendových zákazů, regulace vjezdu do měst."
+      }
+    },
+    "PL": {
+      "country_name": "PL",
+      "timezone": "Europe/Warsaw",
+      "official_portal_url": "https://www.gov.pl/web/infrastruktura",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Nowy Rok",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Święto Trzech Króli",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Wielkanoc",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Drugi Dzień Wielkanocy",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Święto Pracy",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-03",
+          "name": "Święto Konstytucji 3 Maja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Zielone Świątki",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Boże Ciało",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Wniebowzięcie Najświętszej Maryi Panny",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Wszystkich Świętych",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Narodowe Święto Niepodległości",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Wigilia Bożego Narodzenia",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Boże Narodzenie",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Drugi Dzień Bożego Narodzenia",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Sunday"
+        ],
+        "time": "08:00 - 22:00",
+        "vehicles": "nad 12t"
+      },
+      "summer_ban": {
+        "active": true,
+        "period": "2026-06-25 to 2026-08-31",
+        "days": [
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "time": "Pá 18-22, So 08-14, Ne 08-22"
+      }
+    },
+    "PT": {
+      "country_name": "PT",
+      "timezone": "Europe/Lisbon",
+      "official_portal_url": "https://www.imt-ip.pt/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Ano Novo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-17",
+          "name": "Carnaval",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Sexta-feira Santa",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Domingo de Páscoa",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-25",
+          "name": "Dia da Liberdade",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Dia do Trabalhador",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Dia dos Açores",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Corpo de Deus",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Dia de Portugal, de Camões e das Comunidades Portuguesas",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-01",
+          "name": "Dia da Madeira",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Assunção de Nossa Senhora",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-05",
+          "name": "Implantação da República",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Dia de Todos-os-Santos",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-01",
+          "name": "Restauração da Independência",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-08",
+          "name": "Imaculada Conceição",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Natal",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Primeira Oitava",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": false,
+        "note": "Omezení vjezdu do Lisabonu a Porta v špičkách, sváteční zákazy pro nadměrné náklady."
+      }
+    },
+    "RO": {
+      "country_name": "RO",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Anul Nou",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-02",
+          "name": "Anul Nou",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Bobotează",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-07",
+          "name": "Sfântul Ion",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-24",
+          "name": "Unirea Principatelor Române/Mica Unire",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-10",
+          "name": "Vinerea mare",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-12",
+          "name": "Paștele",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-13",
+          "name": "Paștele",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Ziua Muncii",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "Rusaliile",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Ziua Copilului",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Rusaliile",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Adormirea Maicii Domnului/Sfânta Maria Mare",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-30",
+          "name": "Sfântul Andrei",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-01",
+          "name": "Ziua Națională/Marea Unire",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Crăciunul",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Crăciunul",
+          "time": "00:00 - 22:00"
+        }
+      ]
+    },
+    "SK": {
+      "country_name": "SK",
+      "timezone": "Europe/Bratislava",
+      "official_portal_url": "https://www.mindop.sk/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Deň vzniku Slovenskej republiky",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Zjavenie Pána",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Veľkonočný piatok",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Veľkonočný pondelok",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Sviatok práce",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-08",
+          "name": "Deň víťazstva nad fašizmom",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-05",
+          "name": "Sviatok svätého Cyrila a svätého Metoda",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-29",
+          "name": "Výročie Slovenského národného povstania",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-01",
+          "name": "Deň Ústavy Slovenskej republiky",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-15",
+          "name": "Sedembolestná Panna Mária",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Sviatok Všetkých svätých",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-17",
+          "name": "Deň boja za slobodu a demokraciu",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Štedrý deň",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Prvý sviatok vianočný",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Druhý sviatok vianočný",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Sunday",
+          "Svátky"
+        ],
+        "time": "00:00 - 22:00",
+        "vehicles": "nad 7.5t s přívěsem"
+      }
+    },
+    "SI": {
+      "country_name": "SI",
+      "timezone": "Europe/Ljubljana",
+      "official_portal_url": "https://www.gov.si/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "novo leto",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-02",
+          "name": "novo leto",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-08",
+          "name": "Prešernov dan",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "velikonočna nedelja in ponedeljek",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "velikonočna nedelja in ponedeljek",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-27",
+          "name": "dan upora proti okupatorju",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "praznik dela",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-02",
+          "name": "praznik dela",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-02",
+          "name": "dan Primoža Trubarja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "binkoštna nedelja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-25",
+          "name": "dan državnosti",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-14",
+          "name": "dan suverenosti",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Marijino vnebovzetje",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "združitev prekmurskih Slovencev z matičnim narodom",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-15",
+          "name": "priključitev Primorske k matični domovini",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-23",
+          "name": "dan slovenskega športa",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-31",
+          "name": "dan reformacije",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "dan spomina na mrtve",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-23",
+          "name": "dan Rudolfa Maistra",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "božič",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "dan samostojnosti in enotnosti",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Sunday",
+          "Svátky"
+        ],
+        "time": "08:00 - 21:00",
+        "vehicles": "nad 7.5t"
+      }
+    },
+    "ES": {
+      "country_name": "ES",
+      "timezone": "Europe/Madrid",
+      "official_portal_url": "https://www.dgt.es/",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Año Nuevo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Día de Reyes / Epifanía del Señor",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-02-28",
+          "name": "Día de Andalucía",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-03-01",
+          "name": "Dia de les Illes Balears",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-02",
+          "name": "Jueves Santo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Viernes Santo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Lunes de Pascua",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-23",
+          "name": "Día de Castilla y León",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-23",
+          "name": "San Jorge (Día de Aragón)",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Fiesta del trabajo",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-02",
+          "name": "Fiesta de la Comunidad de Madrid",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-17",
+          "name": "Día das Letras Galegas",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-30",
+          "name": "Día de Canarias",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "Día de la Región Castilla-La Mancha",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Corpus Christi",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Día de La Rioja",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Día de la Región de Murcia",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Sant Joan",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-25",
+          "name": "Santiago Apóstol",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-07-28",
+          "name": "Día de las Instituciones de Cantabria",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Asunción",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-08",
+          "name": "Día de Asturias",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-08",
+          "name": "Día de Extremadura",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-11",
+          "name": "Diada Nacional de Catalunya",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-09-15",
+          "name": "Festividad de la Bien Aparecida",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-09",
+          "name": "Dia de la Comunitat Valenciana",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-12",
+          "name": "Fiesta Nacional de España",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Día de todos los Santos",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-06",
+          "name": "Día de la Constitución",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-08",
+          "name": "Inmaculada Concepción",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Navidad",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Feast of Saint Stephen",
+          "time": "00:00 - 22:00"
+        }
+      ],
+      "standard_weekend_ban": {
+        "active": true,
+        "days": [
+          "Neděle a svátky v létě"
+        ],
+        "time": "Různé (dle DGT nařízení)",
+        "note": "Omezení pro nákladní dopravu nad 7.5t na hlavních tazích."
+      }
+    },
+    "SE": {
+      "country_name": "SE",
+      "timezone": "Europe/Berlin",
+      "official_portal_url": "https://ec.europa.eu/transport/index_en",
+      "holiday_bans": [
+        {
+          "date": "2026-01-01",
+          "name": "Nyårsdagen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-01-06",
+          "name": "Trettondedag jul",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Långfredagen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Påskdagen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Annandag påsk",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Första maj",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Kristi himmelsfärdsdag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "Pingstdagen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-06",
+          "name": "Sveriges nationaldag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Midsommarafton",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-06-20",
+          "name": "Midsommardagen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-10-31",
+          "name": "Alla helgons dag",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-24",
+          "name": "Julafton",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Juldagen",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Annandag jul",
+          "time": "00:00 - 22:00"
+        },
+        {
+          "date": "2026-12-31",
+          "name": "Nyårsafton",
+          "time": "00:00 - 22:00"
+        }
+      ]
     }
   }
 }
