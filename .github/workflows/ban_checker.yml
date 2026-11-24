@@ -1,4 +1,4 @@
-name: Daily Truck Bans Check
+name: Daily Public Holiday Calendar Update
 
 on:
   schedule:
@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Test holiday feed rules
+        run: python -m unittest -v
+
       - name: Run update script
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -31,4 +34,3 @@ jobs:
           file_pattern: "bans.json"
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "actions@github.com"
-          push_options: '--force'
